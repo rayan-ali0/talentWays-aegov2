@@ -1,6 +1,6 @@
 
 import { TitleBar } from '../Components/TitleBar'
-import { JudmentAndDecisionInfo } from '../Components/JudmentAndDecisionInfo'
+import { JudmentAndDecisionInfoCard } from '../Components/JudmentAndDecisionInfoCard'
 import { FilterBar } from '../Components/FilterBar'
 import { Pagination } from '../Components/Pagination';
 
@@ -53,11 +53,13 @@ export const JudgmentsAndDecisions = () => {
                 <div className='w-3/4 flex flex-col items-end gap-7'>
                     {
                         mockData.map((mockD, i) => (
-                            <JudmentAndDecisionInfo key={i} mockData={mockD} />
-
+                            <JudmentAndDecisionInfoCard key={i} mockData={mockD} />
                         ))
                     }
-                    <Pagination />
+                    <div className='mt-5'>
+                        <Pagination />
+                    </div>
+
                 </div>
             </section>
 

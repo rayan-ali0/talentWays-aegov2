@@ -11,7 +11,7 @@ type JudmentAndDecisionProps = {
     mockData: JudmentAndDecisionItem
 }
 
-export const JudmentAndDecisionInfo = ({ mockData }: JudmentAndDecisionProps) => {
+export const JudmentAndDecisionInfoCard = ({ mockData }: JudmentAndDecisionProps) => {
     return (
         <div className='flex gap-4 flex-col p-[24px] h-[208px] rounded-[10px] shadow-[0_0_26px_rgba(0,0,0,0.1)]'>
             <section className="flex flex-row text-[26px] font-extrabold gap-2 text-aeblack-800 ">
