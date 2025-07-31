@@ -10,7 +10,6 @@ export const SearchInput = ({labelTitle,placeHolder}:filterProps) => {
             <div className="aegov-form-control flex flex-col gap-2">
                 {/* label size is not working */}
                 <label className='block text-[20px] text-aeblack-800 font-semibold '>{labelTitle}</label>
-                {/* <label for="search_input">Search</label> */}
                 <div className="form-control-input">
                     <span className="control-prefix">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">

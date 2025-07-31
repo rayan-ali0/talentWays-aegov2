@@ -10,7 +10,7 @@ export const DataComponent = ({ title, description }: dataCompProps) => {
             <section className='text-aeblack-800  font-semibold text-[26px]'>
                 {title}
             </section>
-            <section className='text-aeblack-800  text-[16px] leadin-[24px]'>
+            <section className='text-aeblack-800  text-[16px] leading-[30px]'>
                 {description}
             </section>
         </div>

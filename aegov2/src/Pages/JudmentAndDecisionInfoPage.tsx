@@ -1,5 +1,7 @@
 import React from 'react'
 import { DataComponent } from '../Components/DataComponent'
+import { Box } from '../Components/Box'
+import { Feedback } from '../Components/Feedback'
 
 const desc1: string = 'هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة التي يقرأها. ولذلك يتم استخدام طريقة لوريم إيبسوم لأنها تعطي توزيعاَ طبيعياَ -إلى حد ما- للأحرف عوضاً عن استخدام "هنا يوجد محتوى نصي، هنا يوجد محتوى نصي" فتجعلها تبدو (أي الأحرف) وكأنها نص مقروء. العديد من برامح النشر المكتبي وبرامح تحرير صفحات الويب تستخدم لوريم إيبسوم بشكل إفتراضي كنموذج عن النص'
 const desc2: string = '03 يناير 2024'
@@ -13,21 +15,33 @@ const desc4: string = `هناك حقيقة مثبتة منذ زمن طويل و�
 
 export const JudmentAndDecisionInfoPage = () => {
     return (
-        <div className='flex flex-col gap-9'>
-            <section className='h-[120px] flex justify-start items-center text-aeblack-800 font-bold text-[48px] w-full bg-aegold-100'>
+        <div className='flex flex-col gap-10'>
+
+            <section className='h-[120px] flex justify-start items-center text-aeblack-800 font-bold text-[48px] w-full'>
                 43/2024/11 تجاري المصارف
             </section>
-            <section className='flex flex-row gap-3 w-full'>
-                <div className=' w-4/5 flex flex-col gap-5'>
-                    <DataComponent title="ملخص القضية" description={desc1} />
-                    <DataComponent title="تاريخ تسجيل القضية" description={desc2} />
-                    <DataComponent title="تاريخ إصدار الحكم" description={desc3} />
-                    <DataComponent title="تفاصيل الحكم" description={desc4} />
+            <div className='flex flex-row w-full gap-9'>
+                <section className='flex flex-col gap-5 w-4/5'>
+                        <DataComponent title="ملخص القضية" description={desc1} />
+                        <DataComponent title="تاريخ تسجيل القضية" description={desc2} />
+                        <DataComponent title="تاريخ إصدار الحكم" description={desc3} />
+                        <DataComponent title="تفاصيل الحكم" description={desc4} />
+
+                </section>
+                <div className='w-1/5'>
+                    <Box />
                 </div>
-                <div className=' w-1/5'>
-                    box side
+            </div>
+            <div className=' flex p-6 bg-slate-100 gap-6 justify-between items-center'>
+                <div className='w-6/12 bg-whitely-50'>
+                    <Feedback typeP="liked" />
                 </div>
-            </section>
+                <div className='w-6/12 bg-whitely-50'>
+                    <Feedback typeP="feedback" />
+                </div>
+
+            </div>
+
 
         </div>
     )

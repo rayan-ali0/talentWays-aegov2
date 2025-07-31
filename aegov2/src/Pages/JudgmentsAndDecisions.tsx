@@ -3,6 +3,7 @@ import { TitleBar } from '../Components/TitleBar'
 import { JudmentAndDecisionInfoCard } from '../Components/JudmentAndDecisionInfoCard'
 import { FilterBar } from '../Components/FilterBar'
 import { Pagination } from '../Components/Pagination';
+import { Feedback } from '../Components/Feedback';
 
 const mockData = [
     {
@@ -46,7 +47,7 @@ export const JudgmentsAndDecisions = () => {
                 <TitleBar title={"الأحكام و القرارات"} />
             </section>
 
-            <section className='flex flex-row w-full h-7 gap-6'>
+            <section className='flex flex-row w-full  gap-6'>
                 <div className='w-1/4'>
                     <FilterBar />
                 </div>
@@ -60,6 +61,14 @@ export const JudgmentsAndDecisions = () => {
                         <Pagination />
                     </div>
 
+                </div>
+            </section>
+            <section className='flex p-6 bg-slate-100 gap-6 justify-between items-center'>
+                <div className='w-6/12 bg-whitely-50 '>
+                    <Feedback typeP="liked" />
+                </div>
+                <div className='w-6/12 bg-whitely-50 '>
+                    <Feedback typeP="feedback" />
                 </div>
             </section>
 
