@@ -13,6 +13,7 @@ const items = [{
 }]
 
 export const FilterBar = () => {
+  const [searchValue,setSearchValue]=useState('')
   const [fileType, setTypeFile] = useState('')
   const [subTypeFile, setSubTypeFile] = useState('');
   const [court, setCourt] = useState('');
@@ -20,7 +21,7 @@ export const FilterBar = () => {
 
   return (
     <div className='flex flex-wrap flex-row justfiy-center items-center lg:flex-col p-[24px] gap-6 w-full h-auto border border-aegold-500 rounded-[20px]'>
-      <SearchInput labelTitle="الفلتر" placeHolder="ابحث بإسم أو رقم القضية" />
+      <SearchInput labelTitle="الفلتر" placeHolder="ابحث بإسم أو رقم القضية"  setSearch={setSearchValue}/>
       <DropDown items={items} label="نوع الملف" value={fileType} onChange={setTypeFile} />
       <DropDown items={items} label="نوع الملف الفرعي" value={subTypeFile} onChange={setSubTypeFile} />
       <DropDown items={items} label="الجهة القضائية" value={court} onChange={setCourt} />

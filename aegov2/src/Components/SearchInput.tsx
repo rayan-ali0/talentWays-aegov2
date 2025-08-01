@@ -1,10 +1,11 @@
 
 type filterProps={
  labelTitle:string,
- placeHolder:string
+ placeHolder:string,
+ setSearch:React.Dispatch<React.SetStateAction<string>>
 }
 
-export const SearchInput = ({labelTitle,placeHolder}:filterProps) => {
+export const SearchInput = ({labelTitle,placeHolder,setSearch}:filterProps) => {
     return (
         <div className="lg:w-full min-w-[200px] ">
             <div className="aegov-form-control flex flex-col gap-2 w-full">
@@ -20,7 +21,7 @@ export const SearchInput = ({labelTitle,placeHolder}:filterProps) => {
                                 stroke-linecap="round" stroke-linejoin="round" stroke-width="16" />
                         </svg>
                     </span>
-                    <input type="search" name="search_input" id="search_input" placeholder={placeHolder}/>
+                    <input type="search" name="search_input" id="search_input" placeholder={placeHolder} onChange={(e)=>setSearch(e.target.value)}/>
                 </div>
             </div>
         </div>

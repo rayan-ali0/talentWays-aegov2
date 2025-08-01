@@ -9,7 +9,7 @@ type menuProps = {
     label: string,
     onChange: (value: string) => void,
     value: string
-}
+}   
 
 
 
