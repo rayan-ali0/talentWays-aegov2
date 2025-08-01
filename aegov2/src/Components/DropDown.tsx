@@ -21,7 +21,7 @@ export const DropDown = ({ items, label, value, onChange }: menuProps) => {
     }
     return (
         // <main className='w-full xs:min-w-[220px] lg:w-full lg:min-w-0  flex flex-col gap-2'>
-        <main className='w-full xs:w-[280px] sm:w-[330px] lg:w-full flex flex-col gap-2'>
+        <main className='w-full  md:w-[300px] lg:w-full flex flex-col gap-2'>
             {/* <!-- Button to trigger the dropdown --> */}
             <label className='block text-[20px] text-aeblack-800 font-semibold '>{label} </label>
             <button id="dropdownButton-8" data-dropdown-trigger="hover" data-dropdown-toggle="dropdownHover" className="aegov-btn  btn-outline w-full flex justify-between items-center h-[52px]" type="button"

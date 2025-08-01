@@ -7,11 +7,11 @@ type filterProps={
 
 export const SearchInput = ({labelTitle,placeHolder,setSearch}:filterProps) => {
     return (
-        <div className="lg:w-full min-w-[200px] ">
-            <div className="aegov-form-control flex flex-col gap-2 w-full">
-                {/* label size is not working */}
-                <label className='block text-[20px] text-aeblack-800 font-semibold '>{labelTitle}</label>
-                <div className="form-control-input h-[52px] min-w-[200px]">
+        <div className=" w-full">
+            <div className="aegov-form-control control-lg flex flex-col gap-2 w-full  md:w-[300px] lg:w-full ">
+                {/* label bold weight is not working */}
+                <label className='block text-aeblack-800 font-semibold'>{labelTitle}</label>
+                <div className="form-control-input h-[52px]">
                     <span className="control-prefix">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
                             <rect width="256" height="256" fill="none" />
