@@ -1,0 +1,50 @@
+.container {
+  display: flex;
+  direction: rtl;
+  font-family: 'Arial', sans-serif;
+  /* padding: 10px; */
+  /* height: 100%; */
+}
+
+.scroll-indicator {
+  position: sticky;
+  /* top: 100px; */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-left: 20px;
+  width: 2px;
+  background-color: #E1E3E5;
+  height: 100%;
+  border-radius: 5px;
+
+}
+
+.notch {
+  width: 2px;
+  height: 20px;
+  background-color: #E1E3E5;
+  /* margin: 40px 0; */
+  position: relative;
+  /* right: 4px; */
+  transition: background-color 0.3s;
+}
+
+.notch.active {
+  background-color: #B68A35;
+  /* highlighted color */
+  width: 3px;
+  height: 40px;
+  border-radius: 5px;
+}
+
+.content {
+  flex: 1;
+
+}
+
+.section {
+  /* height: 300px; */
+  /* padding: 20px; */
+  /* border-bottom: 1px solid #eee; */
+}

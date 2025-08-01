@@ -6,8 +6,8 @@ function App() {
 
   return (
     <main className=''>
-      <JudgmentsAndDecisions />
-      {/* <JudmentAndDecisionInfoPage/> */}
+      {/* <JudgmentsAndDecisions /> */}
+      <JudmentAndDecisionInfoPage/>
     </main>
   )
 }
