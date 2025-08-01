@@ -5,6 +5,8 @@ import { FilterBar } from '../Components/FilterBar'
 import { Pagination } from '../Components/Pagination';
 import { Feedback } from '../Components/Feedback';
 
+import { useNavigate } from 'react-router-dom';
+
 const mockData = [
     {
         judNb: "43/2024/11",
@@ -40,6 +42,8 @@ const mockData = [
 
 
 export const JudgmentsAndDecisions = () => {
+    const navigate = useNavigate()
+
     return (
         <main className='flex flex-col gap-[50px] m-8 '>
             <section className='h-[120px]'>
@@ -53,7 +57,9 @@ export const JudgmentsAndDecisions = () => {
                 <div className=' w-full lg:w-3/4 flex flex-col items-end gap-7'>
                     {
                         mockData.map((mockD, i) => (
-                            <JudmentAndDecisionInfoCard key={i} mockData={mockD} />
+                            <div key={i} onClick={()=>navigate(`/judgment/${i}`)}   className="cursor-pointer">
+                            <JudmentAndDecisionInfoCard  mockData={mockD} />
+                                </div>
                         ))
                     }
                     <div className='mt-5'>

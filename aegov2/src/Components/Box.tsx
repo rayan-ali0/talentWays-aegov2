@@ -1,12 +1,7 @@
-import React from 'react'
 import downloadIcon from '../assets/DownloadSimple.svg'
 import saveIcon from '../assets/BookmarkSimple.svg'
 import printIcon from '../assets/Printer.svg'
-import { Scrollbars } from 'react-custom-scrollbars-2';
-import type { CSSProperties } from 'react';
 import ScrollIndicator from './ScrollBar';
-
-
 
 
 export const Box = () => {
@@ -31,7 +26,6 @@ export const Box = () => {
                     </div> */}
                     <ScrollIndicator />
                 </div>
-                {/* </Scrollbars> */}
             </section>
         </div>
     )
