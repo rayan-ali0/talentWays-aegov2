@@ -41,17 +41,16 @@ const mockData = [
 
 export const JudgmentsAndDecisions = () => {
     return (
-        <main className='flex flex-col gap-[50px]'>
-
+        <main className='flex flex-col gap-[50px] m-8 '>
             <section className='h-[120px]'>
                 <TitleBar title={"الأحكام و القرارات"} />
             </section>
 
-            <section className='flex flex-row w-full  gap-6'>
-                <div className='w-1/4'>
+            <section className='flex flex-col lg:flex-row w-full  gap-6'>
+                <div className='w-full lg:w-1/4 '>
                     <FilterBar />
                 </div>
-                <div className='w-3/4 flex flex-col items-end gap-7'>
+                <div className=' w-full lg:w-3/4 flex flex-col items-end gap-7'>
                     {
                         mockData.map((mockD, i) => (
                             <JudmentAndDecisionInfoCard key={i} mockData={mockD} />
@@ -63,11 +62,11 @@ export const JudgmentsAndDecisions = () => {
 
                 </div>
             </section>
-            <section className='flex p-6 bg-slate-100 gap-6 justify-between items-center'>
-                <div className='w-6/12 bg-whitely-50 '>
+            <section className='flex  flex-col lg:flex-row p-6 bg-slate-100 gap-7 justify-between items-center'>
+                <div className='w-full lg:w-6/12 bg-whitely-50 '>
                     <Feedback typeP="liked" />
                 </div>
-                <div className='w-6/12 bg-whitely-50 '>
+                <div className='w-full lg:w-6/12 bg-whitely-50 '>
                     <Feedback typeP="feedback" />
                 </div>
             </section>

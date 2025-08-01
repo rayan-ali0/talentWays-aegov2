@@ -4,13 +4,13 @@ import thumbDown from '../assets/Vector.svg'
 
 
 type FeedbackProps = {
-  typeP: string;
+    typeP: string;
 }
 
-export const Feedback = ({typeP}: FeedbackProps) => {
+export const Feedback = ({ typeP }: FeedbackProps) => {
     return (
 
-        <div className='flex flex-col p-[24px] gap-4 w-full'>
+        <div className='flex flex-col p-[24px] gap-4 w-full h-auto sm:h-[180px]'>
             <div className='text-aeblack-800 font-bold text-[18px]'>
                 {
                     typeP === "feedback" ? (
@@ -33,19 +33,19 @@ export const Feedback = ({typeP}: FeedbackProps) => {
                 {
                     typeP === "feedback" ? (
 
-                        <button className="aegov-btn btn-outline" type="button">أعطنا تقييمك </button>
+                        <button className="aegov-btn btn-outline btn-sm lg:btn-md" type="button">أعطنا تقييمك </button>
 
                     ) : (
                         <>
-        <button className="aegov-btn btn-outline" type="button">
-                نعم
-                <img src={thumbUp} />
-            </button>
-            <button className="aegov-btn btn-outline" type="button">
-                لا
-                <img src={thumbDown} />
-            </button>
-            </>
+                            <button className="aegov-btn btn-outline btn-sm lg:btn-md" type="button">
+                                نعم
+                                <img src={thumbUp} />
+                            </button>
+                            <button className="aegov-btn btn-outline btn-sm lg:btn-md" type="button">
+                                لا
+                                <img src={thumbDown} />
+                            </button>
+                        </>
                     )
                 }
             </div>

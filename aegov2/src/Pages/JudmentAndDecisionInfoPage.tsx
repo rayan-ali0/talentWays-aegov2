@@ -2,6 +2,7 @@ import React from 'react'
 import { DataComponent } from '../Components/DataComponent'
 import { Box } from '../Components/Box'
 import { Feedback } from '../Components/Feedback'
+import { Parties } from '../Components/Parties'
 
 const desc1: string = 'هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة التي يقرأها. ولذلك يتم استخدام طريقة لوريم إيبسوم لأنها تعطي توزيعاَ طبيعياَ -إلى حد ما- للأحرف عوضاً عن استخدام "هنا يوجد محتوى نصي، هنا يوجد محتوى نصي" فتجعلها تبدو (أي الأحرف) وكأنها نص مقروء. العديد من برامح النشر المكتبي وبرامح تحرير صفحات الويب تستخدم لوريم إيبسوم بشكل إفتراضي كنموذج عن النص'
 const desc2: string = '03 يناير 2024'
@@ -15,32 +16,34 @@ const desc4: string = `هناك حقيقة مثبتة منذ زمن طويل و�
 
 export const JudmentAndDecisionInfoPage = () => {
     return (
-        <div className='flex flex-col gap-10'>
+        <div className='flex flex-col gap-10 m-8'>
 
-            <section className='h-[120px] flex justify-start items-center text-aeblack-800 font-bold text-[48px] w-full'>
-                43/2024/11 تجاري المصارف
+            <section className='h-[120px] items-start justify-center flex-col xs:flex-row gap-3 flex xs:justify-start xs:items-center text-aeblack-800 font-bold text-[32px] w-full
+             sm:text-[40px] md:text-[42px] lg:text-[48px]'>
+                <span>43/2024/11</span>
+                <span>تجاري المصارف</span>
             </section>
-            <div className='flex flex-row w-full gap-9'>
-                <section className='flex flex-col gap-5 w-4/5'>
-                        <DataComponent title="ملخص القضية" description={desc1} />
-                        <DataComponent title="تاريخ تسجيل القضية" description={desc2} />
-                        <DataComponent title="تاريخ إصدار الحكم" description={desc3} />
-                        <DataComponent title="تفاصيل الحكم" description={desc4} />
+            <div className='flex flex-col lg:flex-row w-full gap-10'>
+                <section className='flex flex-col gap-5  w-full lg:w-4/5'>
+                    <DataComponent title="ملخص القضية" description={desc1} />
+                    <DataComponent title="تاريخ تسجيل القضية" description={desc2} />
+                    <DataComponent title="تاريخ إصدار الحكم" description={desc3} />
+                    <Parties />
+                    <DataComponent title="تفاصيل الحكم" description={desc4} />
 
                 </section>
-                <div className='w-1/5'>
+                <div className='w-full lg:w-1/5 min-w-[250px]'>
                     <Box />
                 </div>
             </div>
-            <div className=' flex p-6 bg-slate-100 gap-6 justify-between items-center'>
-                <div className='w-6/12 bg-whitely-50'>
+            <section className='flex  flex-col lg:flex-row p-6 bg-slate-100 gap-7 justify-between items-center'>
+                <div className='w-full lg:w-6/12 bg-whitely-50 '>
                     <Feedback typeP="liked" />
                 </div>
-                <div className='w-6/12 bg-whitely-50'>
+                <div className='w-full lg:w-6/12 bg-whitely-50 '>
                     <Feedback typeP="feedback" />
                 </div>
-
-            </div>
+            </section>
 
 
         </div>

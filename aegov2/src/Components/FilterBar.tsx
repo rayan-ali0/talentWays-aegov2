@@ -13,14 +13,13 @@ const items = [{
 
 export const FilterBar = () => {
   return (
-    <div className='flex flex-col p-[24px] gap-6 w-full h-auto border border-aegold-500 rounded-[20px]'>
+    <div className='flex flex-wrap flex-row justfiy-center items-center lg:flex-col p-[24px] gap-6 w-full h-auto border border-aegold-500 rounded-[20px]'>
       <SearchInput labelTitle="الفلتر" placeHolder="ابحث بإسم أو رقم القضية" />
       <DropDown items={items} label="نوع الملف" />
       <DropDown items={items} label="نوع الملف الفرعي" />
       <DropDown items={items} label="الجهة القضائية" />
       <DropDown items={items} label="السنة" />
-      <button className="aegov-btn" type="button">ابحث</button>
-
+      <button className="aegov-btn min-w-[220px] h-[52px] lg:w-full" type="button">ابحث</button>
     </div>
   )
 }

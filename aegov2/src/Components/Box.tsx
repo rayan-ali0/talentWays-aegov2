@@ -2,6 +2,12 @@ import React from 'react'
 import downloadIcon from '../assets/DownloadSimple.svg'
 import saveIcon from '../assets/BookmarkSimple.svg'
 import printIcon from '../assets/Printer.svg'
+import { Scrollbars } from 'react-custom-scrollbars-2';
+import type { CSSProperties } from 'react';
+
+
+
+
 
 export const Box = () => {
     return (
@@ -12,21 +18,20 @@ export const Box = () => {
                 <span className='bg-aegold-50 w-[48px] h-[48px] flex justify-center items-center rounded-[8px]'><img src={printIcon} /></span>
             </section>
 
-            <section className='bg-aegold-50 flex flex-col gap-3 rounded-[10px] h-[225px] overflow-hidden p-5'>
+            <section className='bg-aegold-50 flex flex-col gap-3 rounded-[10px] h-[225px]  p-5'>
                 <div className='text-aegold-600 text-[26px] font-semibold'> في هذه الصفحة</div>
-                <div className=" overflow-y-scroll scrollbar-thin scrollbar-thumb-blue-500 scrollbar-track-gray-200">
-
-                    <div className='flex flex-col gap-3'>
+                {/* <Scrollbars style={{ height: '100%' }} > */}
+                    {/* <div className=" overflow-y-scroll scrollbar-thin scrollbar-thumb-aegold-500 scrollbar-track-gray-200"> */}
+                    <div className='flex flex-col gap-3 mr-4   '>
                         <span className='text-aeblack-800'>ملخص القضية</span>
                         <span className='text-aeblack-800'>الحضور </span>
                         <span className='text-aeblack-800'>محاور الجلسة </span>
                         <span className='text-aeblack-800'>القرارات المتخذة</span>
                         <span className='text-aeblack-800'> تم اعتماد المحضر من </span>
 
-
                     </div>
-                </div>
-
+                    {/* </div> */}
+                {/* </Scrollbars> */}
             </section>
         </div>
     )
