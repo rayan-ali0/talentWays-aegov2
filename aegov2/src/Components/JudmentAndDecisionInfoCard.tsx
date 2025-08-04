@@ -1,5 +1,7 @@
 import { Label } from "./Label"
 import { SlCalender } from "react-icons/sl";
+import { formatDateToArabic } from "../utils/FormatDateToArabic";
+
 type JudmentAndDecisionItem = {
     judNb: string,
     date2: string,
@@ -27,7 +29,9 @@ export const JudmentAndDecisionInfoCard = ({ mockData }: JudmentAndDecisionProps
 
             <section className="text-[14px] text-aeblack-600 gap-2 flex flex-row justify-start items-center">
                 <SlCalender />
-                <span>{mockData.date2}</span>
+                <span>{formatDateToArabic(mockData.date2)}</span>
+
+                {/* <span>{mockData.date2}</span> */}
             </section>
 
             <section className="text-aeblack-800 leading-[24px] text-[14px] sm:text-[16px]">
